@@ -4,4 +4,5 @@
 <div>Calories: <%= @candy.calories%>
 <div>Wrapper: <%= @candy.wrapper_color%>
 <div><%= @candy.has_nuts ?  "This Contains Nuts" : "No Nuts Here"%></h2><div>
-
+<div><h4> <%= link_to 'Go back to Candies List', candies_path%>
+<div> <h2> <%= link_to 'Credits', credits_path%> </h2></div>

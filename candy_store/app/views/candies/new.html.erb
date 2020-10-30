@@ -1,8 +1,11 @@
 <h1> create your own candy!</h1>
-<h2> enter the deetails for your candy and we will make it no problem!</h2>
+<h2> enter the details for your candy and we will make it no problem!</h2>
 
-<%form_tag candies_path do%>
-    <div><h2>Name: <%= text_field_tag 'Name' %></h2></div>
-    <div><h2><%= <%= text_field_tag 'Calories'%></h2></div>
-    <div><h2> <%= text_field_tag 'Wrapper' %></h2></div>
-    <div><h2> <%= text_field_tag 'Has Nuts' %></h2></div>
+<%=form_tag  candies_path do%>
+    <div><h2>Name: <%= text_field_tag 'name' %></h2></div>
+    <div><h2> Calories: <%= text_field_tag 'calories'%></h2></div>
+    <div><h2> Wrapper: <%= text_field_tag 'wrapper_color' %></h2></div>
+    <div><h2> Has_Nuts: <%= text_field_tag 'has_nuts' %></h2></div>
+    <div><%= submit_tag 'Submit' %></div>
+    <%end%> 
+    <div> <h2> <%= link_to 'Credits', credits_path%> </h2></div>

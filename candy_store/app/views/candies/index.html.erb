@@ -2,4 +2,5 @@
 <% @candy.each do |candy|%>
     <div><%= link_to candy.name, show_path(candy.id) %></div>
     <%end%>
-    
+    <div><%= link_to 'Create a Candy', new_path %></div>
+    <div> <h2> <%= link_to 'Credits', credits_path%> </h2></div>
