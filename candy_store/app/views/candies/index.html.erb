@@ -1,0 +1,5 @@
+<h1>Our Candies</h1>
+<% @candy.each do |candy|%>
+    <div><%= link_to candy.name, show_path(candy.id) %></div>
+    <%end%>
+    

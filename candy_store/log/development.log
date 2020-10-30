@@ -1,0 +1,1439 @@
+Started GET "/" for ::1 at 2020-10-29 14:49:05 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/justinclifford/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/justinclifford/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.0ms | Allocations: 480)
+Completed 200 OK in 20ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 2739)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCandies (20201029185057)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "candies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "calories" integer, "wrapper_color" varchar, "has_nuts" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201029185057"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-29 18:54:52.036704"], ["updated_at", "2020-10-29 18:54:52.036704"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (1.0ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cake"], ["wrapper_color", "scarlet"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.404566"], ["updated_at", "2020-10-29 19:05:15.404566"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cake Pop"], ["wrapper_color", "gold"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.409758"], ["updated_at", "2020-10-29 19:05:15.409758"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["wrapper_color", "tan"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.414034"], ["updated_at", "2020-10-29 19:05:15.414034"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cheesecake"], ["wrapper_color", "mauve"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.418402"], ["updated_at", "2020-10-29 19:05:15.418402"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["wrapper_color", "blush"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.423061"], ["updated_at", "2020-10-29 19:05:15.423061"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Key Lime Pie"], ["wrapper_color", "amaranth"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.427182"], ["updated_at", "2020-10-29 19:05:15.427182"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ice Cream Cake"], ["wrapper_color", "ultramarine"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.431343"], ["updated_at", "2020-10-29 19:05:15.431343"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ice Cream"], ["wrapper_color", "cerise"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.435900"], ["updated_at", "2020-10-29 19:05:15.435900"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["wrapper_color", "coffee"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.440406"], ["updated_at", "2020-10-29 19:05:15.440406"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Brownie"], ["wrapper_color", "lilac"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.444862"], ["updated_at", "2020-10-29 19:05:15.444862"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sweet Bread"], ["wrapper_color", "lemon"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.448998"], ["updated_at", "2020-10-29 19:05:15.448998"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cobbler"], ["wrapper_color", "blush"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.453334"], ["updated_at", "2020-10-29 19:05:15.453334"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ice Cream"], ["wrapper_color", "sapphire"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.457300"], ["updated_at", "2020-10-29 19:05:15.457300"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Upside Down Pineapple Cake"], ["wrapper_color", "green"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.461079"], ["updated_at", "2020-10-29 19:05:15.461079"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Frozen Yogurt"], ["wrapper_color", "plum"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.465201"], ["updated_at", "2020-10-29 19:05:15.465201"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.6ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doughnut"], ["wrapper_color", "amber"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.469103"], ["updated_at", "2020-10-29 19:05:15.469103"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Key Lime Pie"], ["wrapper_color", "chocolate"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.473867"], ["updated_at", "2020-10-29 19:05:15.473867"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cheesecake"], ["wrapper_color", "gray"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.477904"], ["updated_at", "2020-10-29 19:05:15.477904"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cake Pop"], ["wrapper_color", "ultramarine"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.481769"], ["updated_at", "2020-10-29 19:05:15.481769"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cupcake"], ["wrapper_color", "amethyst"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.499694"], ["updated_at", "2020-10-29 19:05:15.499694"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Upside Down Pineapple Cake"], ["wrapper_color", "ultramarine"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.504036"], ["updated_at", "2020-10-29 19:05:15.504036"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.6ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sweet Bread"], ["wrapper_color", "gray"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.508180"], ["updated_at", "2020-10-29 19:05:15.508180"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["wrapper_color", "viridian"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.512323"], ["updated_at", "2020-10-29 19:05:15.512323"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.6ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["wrapper_color", "brown"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.516169"], ["updated_at", "2020-10-29 19:05:15.516169"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Upside Down Pineapple Cake"], ["wrapper_color", "lavender"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.521699"], ["updated_at", "2020-10-29 19:05:15.521699"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["wrapper_color", "emerald"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.525568"], ["updated_at", "2020-10-29 19:05:15.525568"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cake Pop"], ["wrapper_color", "blue"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.529277"], ["updated_at", "2020-10-29 19:05:15.529277"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Fruit Cake"], ["wrapper_color", "brown"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.533681"], ["updated_at", "2020-10-29 19:05:15.533681"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cake"], ["wrapper_color", "sapphire"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.537589"], ["updated_at", "2020-10-29 19:05:15.537589"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Key Lime Pie"], ["wrapper_color", "ultramarine"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.541804"], ["updated_at", "2020-10-29 19:05:15.541804"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["wrapper_color", "sapphire"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.546034"], ["updated_at", "2020-10-29 19:05:15.546034"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.6ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Trifle"], ["wrapper_color", "magenta"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.550108"], ["updated_at", "2020-10-29 19:05:15.550108"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sweet Bread"], ["wrapper_color", "erin"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.554316"], ["updated_at", "2020-10-29 19:05:15.554316"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Frozen Yogurt"], ["wrapper_color", "bronze"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.558303"], ["updated_at", "2020-10-29 19:05:15.558303"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Upside Down Pineapple Cake"], ["wrapper_color", "silver"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.562441"], ["updated_at", "2020-10-29 19:05:15.562441"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cupcake"], ["wrapper_color", "magenta"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.566739"], ["updated_at", "2020-10-29 19:05:15.566739"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["wrapper_color", "rose"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.570790"], ["updated_at", "2020-10-29 19:05:15.570790"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Trifle"], ["wrapper_color", "ivory"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.575342"], ["updated_at", "2020-10-29 19:05:15.575342"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sweet Bread"], ["wrapper_color", "plum"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.579338"], ["updated_at", "2020-10-29 19:05:15.579338"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["wrapper_color", "amethyst"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.583521"], ["updated_at", "2020-10-29 19:05:15.583521"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["wrapper_color", "silver"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.587294"], ["updated_at", "2020-10-29 19:05:15.587294"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cheesecake"], ["wrapper_color", "yellow"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.591033"], ["updated_at", "2020-10-29 19:05:15.591033"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.6ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doughnut"], ["wrapper_color", "ochre"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.596055"], ["updated_at", "2020-10-29 19:05:15.596055"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Key Lime Pie"], ["wrapper_color", "lavender"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.600250"], ["updated_at", "2020-10-29 19:05:15.600250"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cake Pop"], ["wrapper_color", "green"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.604187"], ["updated_at", "2020-10-29 19:05:15.604187"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Frozen Yogurt"], ["wrapper_color", "amber"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.607847"], ["updated_at", "2020-10-29 19:05:15.607847"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cake"], ["wrapper_color", "sapphire"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.611634"], ["updated_at", "2020-10-29 19:05:15.611634"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doughnut"], ["wrapper_color", "ivory"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.615564"], ["updated_at", "2020-10-29 19:05:15.615564"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cupcake"], ["wrapper_color", "fuchsia"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.619984"], ["updated_at", "2020-10-29 19:05:15.619984"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doughnut"], ["wrapper_color", "harlequin"], ["has_nuts", 1], ["created_at", "2020-10-29 19:05:15.623994"], ["updated_at", "2020-10-29 19:05:15.623994"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.6ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 19]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 20]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 21]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 22]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 23]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.6ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 24]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 25]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 26]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 27]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 28]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 29]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 30]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 31]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 32]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 33]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 34]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 35]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 36]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 37]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 38]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 39]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 40]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 41]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 42]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 43]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 44]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 45]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 46]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 47]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 48]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 49]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 50]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Parfait"], ["wrapper_color", "gray"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.137057"], ["updated_at", "2020-10-29 19:08:16.137057"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Trifle"], ["wrapper_color", "olive"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.141420"], ["updated_at", "2020-10-29 19:08:16.141420"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Parfait"], ["wrapper_color", "lavender"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.145274"], ["updated_at", "2020-10-29 19:08:16.145274"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doughnut"], ["wrapper_color", "yellow"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.149144"], ["updated_at", "2020-10-29 19:08:16.149144"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sundae"], ["wrapper_color", "plum"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.153186"], ["updated_at", "2020-10-29 19:08:16.153186"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cookie"], ["wrapper_color", "harlequin"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.157000"], ["updated_at", "2020-10-29 19:08:16.157000"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sundae"], ["wrapper_color", "azure"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.160979"], ["updated_at", "2020-10-29 19:08:16.160979"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Frozen Yogurt"], ["wrapper_color", "harlequin"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.174140"], ["updated_at", "2020-10-29 19:08:16.174140"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Parfait"], ["wrapper_color", "erin"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.178062"], ["updated_at", "2020-10-29 19:08:16.178062"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["wrapper_color", "sapphire"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.181761"], ["updated_at", "2020-10-29 19:08:16.181761"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ice Cream"], ["wrapper_color", "fuchsia"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.185445"], ["updated_at", "2020-10-29 19:08:16.185445"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doughnut"], ["wrapper_color", "amber"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.189172"], ["updated_at", "2020-10-29 19:08:16.189172"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Trifle"], ["wrapper_color", "red"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.192925"], ["updated_at", "2020-10-29 19:08:16.192925"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Parfait"], ["wrapper_color", "purple"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.197142"], ["updated_at", "2020-10-29 19:08:16.197142"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Brownie"], ["wrapper_color", "violet"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.201213"], ["updated_at", "2020-10-29 19:08:16.201213"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["wrapper_color", "lemon"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.205113"], ["updated_at", "2020-10-29 19:08:16.205113"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["wrapper_color", "blue"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.208838"], ["updated_at", "2020-10-29 19:08:16.208838"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Upside Down Pineapple Cake"], ["wrapper_color", "burgundy"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.212613"], ["updated_at", "2020-10-29 19:08:16.212613"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cookie"], ["wrapper_color", "coffee"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.216349"], ["updated_at", "2020-10-29 19:08:16.216349"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Frozen Yogurt"], ["wrapper_color", "pink"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.219920"], ["updated_at", "2020-10-29 19:08:16.219920"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Fruit Cake"], ["wrapper_color", "raspberry"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.223968"], ["updated_at", "2020-10-29 19:08:16.223968"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doughnut"], ["wrapper_color", "viridian"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.227618"], ["updated_at", "2020-10-29 19:08:16.227618"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Frozen Yogurt"], ["wrapper_color", "cerise"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.231056"], ["updated_at", "2020-10-29 19:08:16.231056"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sweet Bread"], ["wrapper_color", "rose"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.234873"], ["updated_at", "2020-10-29 19:08:16.234873"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ice Cream Cake"], ["wrapper_color", "red"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.238534"], ["updated_at", "2020-10-29 19:08:16.238534"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pudding"], ["wrapper_color", "copper"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.242480"], ["updated_at", "2020-10-29 19:08:16.242480"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cookie"], ["wrapper_color", "violet"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.246321"], ["updated_at", "2020-10-29 19:08:16.246321"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["wrapper_color", "salmon"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.250080"], ["updated_at", "2020-10-29 19:08:16.250080"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Brownie"], ["wrapper_color", "indigo"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.253977"], ["updated_at", "2020-10-29 19:08:16.253977"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cupcake"], ["wrapper_color", "aquamarine"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.257868"], ["updated_at", "2020-10-29 19:08:16.257868"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cupcake"], ["wrapper_color", "sky"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.261876"], ["updated_at", "2020-10-29 19:08:16.261876"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ice Cream"], ["wrapper_color", "maroon"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.265629"], ["updated_at", "2020-10-29 19:08:16.265629"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Frozen Yogurt"], ["wrapper_color", "teal"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.269533"], ["updated_at", "2020-10-29 19:08:16.269533"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Trifle"], ["wrapper_color", "indigo"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.273403"], ["updated_at", "2020-10-29 19:08:16.273403"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cupcake"], ["wrapper_color", "gold"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.277188"], ["updated_at", "2020-10-29 19:08:16.277188"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cake Pop"], ["wrapper_color", "turquoise"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.281268"], ["updated_at", "2020-10-29 19:08:16.281268"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Fruit Cake"], ["wrapper_color", "crimson"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.285038"], ["updated_at", "2020-10-29 19:08:16.285038"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ice Cream Cake"], ["wrapper_color", "emerald"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.288741"], ["updated_at", "2020-10-29 19:08:16.288741"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cake Pop"], ["wrapper_color", "ruby"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.292525"], ["updated_at", "2020-10-29 19:08:16.292525"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Key Lime Pie"], ["wrapper_color", "magenta"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.296489"], ["updated_at", "2020-10-29 19:08:16.296489"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.6ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cake Pop"], ["wrapper_color", "ultramarine"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.300372"], ["updated_at", "2020-10-29 19:08:16.300372"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doughnut"], ["wrapper_color", "orchid"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.304548"], ["updated_at", "2020-10-29 19:08:16.304548"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Trifle"], ["wrapper_color", "amethyst"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.308285"], ["updated_at", "2020-10-29 19:08:16.308285"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["wrapper_color", "beige"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.312039"], ["updated_at", "2020-10-29 19:08:16.312039"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sundae"], ["wrapper_color", "pink"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.316121"], ["updated_at", "2020-10-29 19:08:16.316121"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cheesecake"], ["wrapper_color", "puce"], ["has_nuts", 0], ["created_at", "2020-10-29 19:08:16.319838"], ["updated_at", "2020-10-29 19:08:16.319838"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cookie"], ["wrapper_color", "aquamarine"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.324299"], ["updated_at", "2020-10-29 19:08:16.324299"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Fruit Cake"], ["wrapper_color", "harlequin"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.328004"], ["updated_at", "2020-10-29 19:08:16.328004"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Fruit Cake"], ["wrapper_color", "amber"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.331634"], ["updated_at", "2020-10-29 19:08:16.331634"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Trifle"], ["wrapper_color", "blush"], ["has_nuts", 1], ["created_at", "2020-10-29 19:08:16.335752"], ["updated_at", "2020-10-29 19:08:16.335752"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.6ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 51]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 52]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 53]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.5ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 54]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 55]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 56]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 57]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 58]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 59]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 60]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 61]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 62]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 63]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 64]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 65]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 66]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 67]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 68]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 69]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 70]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 71]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 72]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 73]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 74]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.5ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 75]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 76]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 77]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 78]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 79]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 80]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 81]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 82]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 83]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 84]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 85]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 86]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.5ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 87]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 88]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 89]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 90]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 91]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 92]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 93]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 94]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 95]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.5ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 96]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 97]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 98]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 99]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "candies" WHERE "candies"."id" = ?[0m  [["id", 100]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cheesecake"], ["calories", 94], ["wrapper_color", "crimson"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.737319"], ["updated_at", "2020-10-29 19:09:12.737319"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["calories", 73], ["wrapper_color", "orange"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.741870"], ["updated_at", "2020-10-29 19:09:12.741870"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Key Lime Pie"], ["calories", 50], ["wrapper_color", "silver"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.745765"], ["updated_at", "2020-10-29 19:09:12.745765"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Fruit Cake"], ["calories", 69], ["wrapper_color", "lemon"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.749677"], ["updated_at", "2020-10-29 19:09:12.749677"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cookie"], ["calories", 50], ["wrapper_color", "pink"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.753618"], ["updated_at", "2020-10-29 19:09:12.753618"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ice Cream"], ["calories", 71], ["wrapper_color", "gold"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.757385"], ["updated_at", "2020-10-29 19:09:12.757385"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["calories", 83], ["wrapper_color", "amaranth"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.761431"], ["updated_at", "2020-10-29 19:09:12.761431"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cheesecake"], ["calories", 64], ["wrapper_color", "orchid"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.765308"], ["updated_at", "2020-10-29 19:09:12.765308"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Upside Down Pineapple Cake"], ["calories", 57], ["wrapper_color", "azure"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.769079"], ["updated_at", "2020-10-29 19:09:12.769079"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cupcake"], ["calories", 70], ["wrapper_color", "violet"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.772947"], ["updated_at", "2020-10-29 19:09:12.772947"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sweet Bread"], ["calories", 59], ["wrapper_color", "cyan"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.786416"], ["updated_at", "2020-10-29 19:09:12.786416"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ice Cream Cake"], ["calories", 99], ["wrapper_color", "harlequin"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.790805"], ["updated_at", "2020-10-29 19:09:12.790805"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Pudding"], ["calories", 92], ["wrapper_color", "maroon"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.794878"], ["updated_at", "2020-10-29 19:09:12.794878"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Frozen Yogurt"], ["calories", 65], ["wrapper_color", "carmine"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.798752"], ["updated_at", "2020-10-29 19:09:12.798752"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Pudding"], ["calories", 69], ["wrapper_color", "indigo"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.803023"], ["updated_at", "2020-10-29 19:09:12.803023"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Doughnut"], ["calories", 66], ["wrapper_color", "orchid"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.806785"], ["updated_at", "2020-10-29 19:09:12.806785"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["calories", 79], ["wrapper_color", "blue"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.810484"], ["updated_at", "2020-10-29 19:09:12.810484"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["calories", 63], ["wrapper_color", "salmon"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.814685"], ["updated_at", "2020-10-29 19:09:12.814685"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Upside Down Pineapple Cake"], ["calories", 56], ["wrapper_color", "lilac"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.818460"], ["updated_at", "2020-10-29 19:09:12.818460"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cake"], ["calories", 69], ["wrapper_color", "ochre"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.822351"], ["updated_at", "2020-10-29 19:09:12.822351"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["calories", 58], ["wrapper_color", "silver"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.826373"], ["updated_at", "2020-10-29 19:09:12.826373"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["calories", 86], ["wrapper_color", "azure"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.830142"], ["updated_at", "2020-10-29 19:09:12.830142"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ice Cream"], ["calories", 93], ["wrapper_color", "amber"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.834256"], ["updated_at", "2020-10-29 19:09:12.834256"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cheesecake"], ["calories", 73], ["wrapper_color", "amber"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.838286"], ["updated_at", "2020-10-29 19:09:12.838286"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Brownie"], ["calories", 56], ["wrapper_color", "periwinkle"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.842036"], ["updated_at", "2020-10-29 19:09:12.842036"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Key Lime Pie"], ["calories", 60], ["wrapper_color", "blue"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.845670"], ["updated_at", "2020-10-29 19:09:12.845670"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Doughnut"], ["calories", 94], ["wrapper_color", "blush"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.849388"], ["updated_at", "2020-10-29 19:09:12.849388"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cake"], ["calories", 99], ["wrapper_color", "scarlet"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.853248"], ["updated_at", "2020-10-29 19:09:12.853248"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cake Pop"], ["calories", 90], ["wrapper_color", "cerulean"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.856966"], ["updated_at", "2020-10-29 19:09:12.856966"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Fruit Cake"], ["calories", 85], ["wrapper_color", "burgundy"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.860752"], ["updated_at", "2020-10-29 19:09:12.860752"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cake"], ["calories", 53], ["wrapper_color", "yellow"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.864760"], ["updated_at", "2020-10-29 19:09:12.864760"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["calories", 79], ["wrapper_color", "copper"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.868530"], ["updated_at", "2020-10-29 19:09:12.868530"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cookie"], ["calories", 80], ["wrapper_color", "coral"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.872454"], ["updated_at", "2020-10-29 19:09:12.872454"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cobbler"], ["calories", 62], ["wrapper_color", "grey"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.876285"], ["updated_at", "2020-10-29 19:09:12.876285"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ice Cream"], ["calories", 76], ["wrapper_color", "lavender"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.880186"], ["updated_at", "2020-10-29 19:09:12.880186"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["calories", 68], ["wrapper_color", "sky"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.884164"], ["updated_at", "2020-10-29 19:09:12.884164"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Key Lime Pie"], ["calories", 68], ["wrapper_color", "emerald"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.887871"], ["updated_at", "2020-10-29 19:09:12.887871"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["calories", 78], ["wrapper_color", "aquamarine"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.891722"], ["updated_at", "2020-10-29 19:09:12.891722"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cake Pop"], ["calories", 56], ["wrapper_color", "amber"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.895666"], ["updated_at", "2020-10-29 19:09:12.895666"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Pie"], ["calories", 64], ["wrapper_color", "jade"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.899384"], ["updated_at", "2020-10-29 19:09:12.899384"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Brownie"], ["calories", 61], ["wrapper_color", "red"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.903353"], ["updated_at", "2020-10-29 19:09:12.903353"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cookie"], ["calories", 87], ["wrapper_color", "harlequin"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.907386"], ["updated_at", "2020-10-29 19:09:12.907386"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ice Cream Cake"], ["calories", 90], ["wrapper_color", "fuchsia"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.911236"], ["updated_at", "2020-10-29 19:09:12.911236"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Doughnut"], ["calories", 76], ["wrapper_color", "copper"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.915261"], ["updated_at", "2020-10-29 19:09:12.915261"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ice Cream"], ["calories", 96], ["wrapper_color", "lilac"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.919193"], ["updated_at", "2020-10-29 19:09:12.919193"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.4ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cake Pop"], ["calories", 70], ["wrapper_color", "amaranth"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.923349"], ["updated_at", "2020-10-29 19:09:12.923349"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Coffee Cake"], ["calories", 77], ["wrapper_color", "cerise"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.927385"], ["updated_at", "2020-10-29 19:09:12.927385"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cupcake"], ["calories", 61], ["wrapper_color", "plum"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.931428"], ["updated_at", "2020-10-29 19:09:12.931428"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Brownie"], ["calories", 60], ["wrapper_color", "crimson"], ["has_nuts", 1], ["created_at", "2020-10-29 19:09:12.935616"], ["updated_at", "2020-10-29 19:09:12.935616"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCandy Create (0.5ms)[0m  [1m[32mINSERT INTO "candies" ("name", "calories", "wrapper_color", "has_nuts", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cookie"], ["calories", 60], ["wrapper_color", "taupe"], ["has_nuts", 0], ["created_at", "2020-10-29 19:09:12.939336"], ["updated_at", "2020-10-29 19:09:12.939336"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2020-10-29 15:23:40 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#home as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 2873)
+
+
+  
+ActionView::MissingTemplate (Missing template application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/justinclifford/Flatiron/code/candy_store/candy_store/app/views"
+  * "/Users/justinclifford/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/justinclifford/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+  
+app/controllers/application_controller.rb:3:in `home'
+Started GET "/" for ::1 at 2020-10-29 15:25:13 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#home as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 1974)
+
+
+  
+ActionView::MissingTemplate (Missing template application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/justinclifford/Flatiron/code/candy_store/candy_store/app/views"
+  * "/Users/justinclifford/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/justinclifford/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+  
+app/controllers/application_controller.rb:3:in `home'
+Started GET "/" for ::1 at 2020-10-29 15:26:27 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#home as HTML
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.0ms | Allocations: 1178)
+
+
+  
+ActionController::MissingExactTemplate (ApplicationController#home is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-29 15:27:50 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#home as HTML
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.0ms | Allocations: 1327)
+
+
+  
+ActionController::MissingExactTemplate (ApplicationController#home is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-29 15:27:56 -0400
+Processing by ApplicationController#home as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 547)
+
+
+  
+ActionController::MissingExactTemplate (ApplicationController#home is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-29 15:28:06 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#home as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1169)
+
+
+  
+ActionView::MissingTemplate (Missing template application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/justinclifford/Flatiron/code/candy_store/candy_store/app/views"
+  * "/Users/justinclifford/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/justinclifford/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+  
+app/controllers/application_controller.rb:3:in `home'
+Started GET "/" for ::1 at 2020-10-29 15:28:44 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#home as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 792)
+
+
+  
+ActionView::MissingTemplate (Missing template application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/justinclifford/Flatiron/code/candy_store/candy_store/app/views"
+  * "/Users/justinclifford/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/justinclifford/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+  
+app/controllers/application_controller.rb:3:in `home'
+Started GET "/" for ::1 at 2020-10-29 15:43:22 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#home as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1124)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/justinclifford/Flatiron/code/candy_store/candy_store/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 3120ms
+Built at: 10/29/2020 3:43:29 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 6191ms (Views: 6187.4ms | ActiveRecord: 0.0ms | Allocations: 75021)
+
+
+Started GET "/credits" for ::1 at 2020-10-29 15:53:57 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticController#credits as HTML
+Completed 500 Internal Server Error in 20948ms (ActiveRecord: 0.0ms | Allocations: 169019)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `credits'
+app/controllers/static_controller.rb:8:in `credits'
+Started GET "/credits" for ::1 at 2020-10-29 15:54:53 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#credits as HTML
+  Rendering static/credits.html.erb within layouts/application
+  Rendered static/credits.html.erb within layouts/application (Duration: 2.4ms | Allocations: 217)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 42.4ms | ActiveRecord: 0.0ms | Allocations: 9447)
+
+
+Started GET "/" for ::1 at 2020-10-29 16:01:21 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticController#home as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms | Allocations: 4074)
+
+
+Started GET "/" for ::1 at 2020-10-29 16:17:20 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#home as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.0ms | Allocations: 11882)
+
+
+Started GET "/candies" for ::1 at 2020-10-29 16:17:35 -0400
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:2
+  Rendered candies/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 6532)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 0.8ms | Allocations: 11188)
+
+
+Started GET "/candies" for ::1 at 2020-10-29 16:18:19 -0400
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.4ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:2
+  Rendered candies/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1456)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.4ms | Allocations: 6168)
+
+
+Started GET "/candies" for ::1 at 2020-10-29 16:29:15 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.8ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:2
+  Rendered candies/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 5900)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 48.3ms | ActiveRecord: 0.8ms | Allocations: 10906)
+
+
+Started GET "/candies/108" for ::1 at 2020-10-29 16:29:46 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"108"}
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 108], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 26.4ms | ActiveRecord: 0.3ms | Allocations: 6950)
+
+
+Started GET "/candies/108" for ::1 at 2020-10-29 16:31:24 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"108"}
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 108], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 175)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.2ms | Allocations: 5411)
+
+
+Started GET "/candies/108" for ::1 at 2020-10-29 16:31:39 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"108"}
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 108], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 173)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.3ms | Allocations: 5429)
+
+
+Started GET "/candies/" for ::1 at 2020-10-29 16:34:49 -0400
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.5ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:2
+  Rendered candies/index.html.erb within layouts/application (Duration: 328.8ms | Allocations: 82039)
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 0.5ms | Allocations: 83531)
+
+
+  
+ActionView::Template::Error (undefined method `show_path' for #<#<Class:0x00007fbeafbeeef0>:0x00007fbeafbec768>):
+    1: <h1>Our Candies</h1>
+    2: <% @candy.each do |candy|%>
+    3:     <div><%= link_to candy.name, show_path(candy.id) %></div>
+    4:     <%end%>
+    5:     
+  
+app/views/candies/index.html.erb:3
+app/views/candies/index.html.erb:2
+Started GET "/cdbkj" for ::1 at 2020-10-29 16:35:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cdbkj"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/candies" for ::1 at 2020-10-29 16:40:25 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.4ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:2
+  Rendered candies/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 9089)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 59.7ms | ActiveRecord: 1.3ms | Allocations: 18473)
+
+
+Started GET "/candies/101" for ::1 at 2020-10-29 16:40:27 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 24.2ms | ActiveRecord: 0.3ms | Allocations: 5094)
+
+
+Started GET "/candies/105" for ::1 at 2020-10-29 16:40:31 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 17)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 0.3ms | Allocations: 4342)
+
+
+Started GET "/candies/109" for ::1 at 2020-10-29 16:41:23 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"109"}
+  [1m[36mCandy Load (0.1ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 109], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.1ms | Allocations: 4339)
+
+
+Started GET "/candies/130" for ::1 at 2020-10-29 16:41:37 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mCandy Load (0.4ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.4ms | Allocations: 4324)
+
+
+Started GET "/candies/130" for ::1 at 2020-10-29 16:41:42 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.2ms | Allocations: 4326)
+
+
+Started GET "/candies/131" for ::1 at 2020-10-29 16:41:46 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"131"}
+  [1m[36mCandy Load (0.1ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 4319)
+
+
+Started GET "/candies" for ::1 at 2020-10-29 17:02:37 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:2
+  Rendered candies/index.html.erb within layouts/application (Duration: 26.0ms | Allocations: 9118)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 56.8ms | ActiveRecord: 1.0ms | Allocations: 19418)
+
+
+Started GET "/candies" for ::1 at 2020-10-29 17:37:16 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.6ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:2
+  Rendered candies/index.html.erb within layouts/application (Duration: 15.3ms | Allocations: 2684)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 68.4ms | ActiveRecord: 0.6ms | Allocations: 7395)
+
+
+Started GET "/candies" for ::1 at 2020-10-29 18:03:31 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:2
+  Rendered candies/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2541)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.3ms | Allocations: 6327)
+
+
+Started GET "/candies/101" for ::1 at 2020-10-29 18:04:43 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 6972)
+
+
+Started GET "/candies/102" for ::1 at 2020-10-29 18:04:47 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mCandy Load (0.1ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 4326)
+
+
+Started GET "/candies/106" for ::1 at 2020-10-29 18:04:50 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"106"}
+  [1m[36mCandy Load (0.1ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 106], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 4315)
+
+
+Started GET "/candies/112" for ::1 at 2020-10-29 18:04:53 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mCandy Load (0.1ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 17)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 4336)
+
+
+Started GET "/candies/114" for ::1 at 2020-10-29 18:04:57 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"114"}
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."id" = ? LIMIT ?[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:7:in `show'
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.2ms | Allocations: 4320)
+
+
